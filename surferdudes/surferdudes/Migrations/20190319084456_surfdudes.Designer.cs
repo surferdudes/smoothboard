@@ -9,7 +9,7 @@ using surferdudes.Models;
 namespace surferdudes.Migrations
 {
     [DbContext(typeof(surferdudesContext))]
-    [Migration("20190319082322_surfdudes")]
+    [Migration("20190319084456_surfdudes")]
     partial class surfdudes
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

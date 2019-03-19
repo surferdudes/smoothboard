@@ -23,10 +23,5 @@ namespace surferdudes.Controllers
         // GET: Nieuwsbriefs/Details/5
         
 
-        // GET: Nieuwsbriefs/Create
-        public IActionResult CreateNieuws()
-        {
-            return View();            
-        }
     }
 }

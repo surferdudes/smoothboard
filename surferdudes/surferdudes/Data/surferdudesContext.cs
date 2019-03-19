@@ -19,5 +19,7 @@ namespace surferdudes.Models
         public DbSet<surferdudes.Models.Contact> Contact { get; set; }
 
         public DbSet<surferdudes.Models.FAQ> FAQ { get; set; }
+
+        public DbSet<surferdudes.Models.Nieuwsbriefmodel> Nieuwsbriefmodel { get; set; }
     }
 }
