@@ -9,8 +9,8 @@ using surferdudes.Models;
 namespace surferdudes.Migrations
 {
     [DbContext(typeof(surferdudesContext))]
-    [Migration("20190311131001_surferdudes")]
-    partial class surferdudes
+    [Migration("20190319082322_surfdudes")]
+    partial class surfdudes
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -19,6 +19,42 @@ namespace surferdudes.Migrations
                 .HasAnnotation("ProductVersion", "2.1.4-rtm-31024")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("surferdudes.Models.Contact", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Achternaam");
+
+                    b.Property<string>("Email");
+
+                    b.Property<string>("Land");
+
+                    b.Property<string>("Telefoonnummer");
+
+                    b.Property<string>("Voornaam");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Contact");
+                });
+
+            modelBuilder.Entity("surferdudes.Models.FAQ", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("antwoord");
+
+                    b.Property<string>("vraag");
+
+                    b.HasKey("id");
+
+                    b.ToTable("FAQ");
+                });
 
             modelBuilder.Entity("surferdudes.Models.Product", b =>
                 {
